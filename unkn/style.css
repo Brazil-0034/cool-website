@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+
+* {
+    margin: 0;
+    font-family: Trebuchet MS;
+}
+
+/* To prevent mobile browsers to parse body tags improperly */
+#wrapper {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: url('img/background.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+@font-face { 
+    font-family: 'Calligraffitti';
+    src: url('fonts/Calligraffitti-Refular.ttf') format('ttf');
+}
+
+#backdrop-overlay {
+    background: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 1000%;
+    height: 1000%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#header-box {
+    margin: 20px auto;
+    text-align: center;
+    z-index: 1;
+    color: white;
+}
+
+#buttons-box {
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    color: white;
+}
+
+h1, .letter {
+    font-family: 'Calligraffitti', cursive;
+    color: white;
+    font-size: 165px;
+}
+
+h2 {
+    font-size: 75px;
+}
+
+
+@media (max-width : 400px) {
+    h1, .letter {
+        font-size: 100px;
+    }
+
+    .pagelink, .pagelink:active, .pagelink:focus {
+        line-height: 40px;
+    }
+}
+
+
+#join-btn {
+    color: black;
+    background: white;
+    font-size: 12px;
+    padding: 7px 12px;
+    margin: 12px 12px;
+    border-radius: 15px;
+    width: 80px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+#join-btn:hover {
+    cursor: pointer;
+    letter-spacing: 2px;
+    width: 95px;
+    background: #c856be;
+    color: white;
+}
+
+a, a:active, a:focus {
+    text-decoration: underline;
+    color: white;
+    font-size: 14px;
+    padding: 7px 12px;
+}
+
+#form {
+    color: white;
+    width: 100%;
+}
+
+#form input, textarea {
+    margin: 10px 0px;
+    padding: 5px;
+    width: 100%;
+    
+    border: none;
+    outline-width: 0;
+    resize: vertical;
+}

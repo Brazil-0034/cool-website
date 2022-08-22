@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>replit</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    </head>
+    <body>
+        
+    <div id="wrapper">
+        
+        <div id="form">
+            
+            <div id="header-box">
+                <h2 style="margin-bottom: 20px; margin-right: 3px;">Ban Appeals</h2>
+            </div>
+            
+            <div id="form-inputs">
+                
+                <div class="label">Discord Username:</div>
+                <input type="text" id="username" placeholder="Username#1234"/>
+                <div class="label">Why should you be unbanned?</div>
+                <textarea id="reason" placeholder="I should be unbanned because..."></textarea>
+                <div id="submit-btn">Submit</div>
+
+            </div>
+        </div>
+
+        <script>
+            const submitBtn = document.querySelector("#submit-btn");
+            
+            submitBtn.addEventListener("click", () => {
+                // submitBtn.innerHTML = "Submitting...";
+                // This will later be replaced with an API call to a ban appeal server. For now, it's just dummy text.
+                setTimeout(() => {
+                    document.querySelector("#header-box h2").innerHTML = "Submitted<br><a href='index.html'>Go Back</a>";
+                    // make the "Submitted" a tad bigger
+                    document.querySelector("#header-box h2").style.fontSize = "3em";
+                    document.querySelector("#header-box h2").style.fontFamily = "'Calligraffitti', cursive";
+                    
+                    document.querySelector("#form-inputs").style.display = "none";
+                }, 750);
+            });
+        </script>
+        <script src="script/script.js"></script>
+    </div>
+        
+    </body>
+
+</html>

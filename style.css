@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* To prevent mobile browsers to parse body tags improperly */
+#wrapper {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: url('img/background.gif') no-repeat center center fixed;
+    -webkit-background-size: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    height: 100%;
+    
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    overflow-x: hidden;
+}
+
+@font-face { 
+    font-family: 'Calligraffitti';
+    src: url('fonts/Calligraffitti-Refular.ttf') format('ttf');
+}
+
+#backdrop-overlay {
+    background: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 1000%;
+    height: 1000%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.animatedLink {
+    opacity: 0;
+}
+
+#header-box {
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    color: white;
+}
+
+#buttons-box {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: white;
+    white-space: nowrap;
+}
+
+#events-box {
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+}
+
+.event {
+    opacity: 0;
+    margin: 7px 20px;
+    padding: 10px;
+
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding-right: 12px;
+    border-radius: 5px;
+    
+    display: inline-block;
+    text-align: left;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.event:hover {
+    border: 1px solid white;
+}
+
+.event-title {
+/*     font-family: Tahoma; */
+    font-size: 125%;
+}
+
+h1, .letter {
+    z-index: 2;
+    font-family: 'Calligraffitti', cursive;
+    color: white;
+    font-size: 165px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h4 {
+    margin: 20px;
+    font-size: 20px;
+}
+
+
+#join-btn {
+    color: black;
+    background: white;
+    font-size: 12px;
+    padding: 7px 12px;
+    margin: 2px 12px;
+    border-radius: 15px;
+    width: 90px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+#join-btn:hover {
+    cursor: pointer;
+    letter-spacing: 2px;
+    width: 105px;
+    background: #c856be;
+    color: white;
+}
+
+a, a:active, a:focus {
+    text-decoration: underline;
+    color: white;
+    font-size: 14px;
+    padding: 7px 12px;
+    display: inline;
+}
+
+.event-link, .event-link:active, .event-link:focus {
+    padding: 0;
+    display: block;
+}
+
+#form {
+    color: white;
+    width: 300px;
+    margin: auto;
+}
+
+#form input, textarea {
+    border-radius: 7px;
+    font-weight: bold;
+    margin: 10px 0px;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid white;
+    color: white;
+    
+    border: none;
+    outline-width: 0;
+    resize: vertical;
+}
+
+textarea::-webkit-resizer {
+    background-color: transparent;
+}
+
+#modal {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.95);
+    color: white;
+    border-radius: 5px;
+    width: 400px;
+    height: 140px;
+    padding: 40px;
+    z-index: 10;
+    box-shadow: 0px 0px 100px 100px #121212;
+}
+
+#modal-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#modal-desc {
+    margin-top: 10px;
+}
+
+#submit-btn {
+    cursor: pointer;
+    padding: 7.5px 15px;
+    transition: 0.15s;
+    margin: 10px auto;
+    width: 50px;
+    margin: 0 auto;
+}
+
+#submit-btn:hover {
+    color: #c856be;
+}
+
+@media only screen and (max-width: 600px) {
+    h1, .letter {
+        font-size: 100px;
+    }
+
+    html {
+        background: url('img/ios-background.gif') no-repeat center center fixed;
+    }
+
+    .pagelink, .pagelink:active, .pagelink:focus {
+        padding: 5px;
+    }
+    
+    #join-btn {
+        padding: 7px 12px;
+        margin: 0;
+    }
+
+/*  puts join serv button on new line   
+    #button-wrapper::before{
+        content: "\a";
+        white-space: pre;
+    } */
+
+    #form {
+        width: 300px;
+    }
+}
